@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/venue_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/venue_photo_height" />
+
+            <TextView
+                android:id="@+id/venue_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-35dp"
+
+                android:background="@drawable/round_shape_white"
+                android:gravity="center"
+
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/venue_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/venue_address"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/venue_category"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/colorMediumBrown"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+
+                android:background="@color/colorDivider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/temp_lorem_text"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/spinner_layout" />
+
+    </RelativeLayout>
+
+</FrameLayout>

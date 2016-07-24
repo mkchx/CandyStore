@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Candystore</string>
+    <string name="api_failure">Something wen\'t wrong</string>
+
+    <string name="fsq_client_id">3VEMZ3ASZTZUVHSN2WOSKZLIIFL3RX20HGX5Y5ZLVIGDKMCX</string>
+    <string name="fsq_client_secret">KKZGUBEVYMGJP0NQJ1TB3ZFYXZONJCF0JLF2AOWAXAN3FQMM</string>
+
+    <string name="map_debug_home">AIzaSyBxfx_Hqcm3JoB7I1tXDVvVrYhLmPqL7T8</string>
+    <string name="map_debug_work">AIzaSyD6lZb7rkpzPrKTU5HQ4Rqr9eh0KrL24Tw</string>
+
+    <string name="api_url">https://api.foursquare.com/v2/</string>
+
+    <string name="network_main">Whoops! Look\'s like your device has no internet connection</string>
+    <string name="network_action">check your connection</string>
+
+    <string name="location_txt">Current Location</string>
+
+    <string name="snack_gps_title">Location is unavailable</string>
+    <string name="snack_gps_action">Enable GPS</string>
+
+    <string name="temp_lorem_text">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </string>
+
+    <string name="gps_permission">You need to grant GPS permission, in order to use the app</string>
+    <string name="permissionEnable">Retry</string>
+</resources>
