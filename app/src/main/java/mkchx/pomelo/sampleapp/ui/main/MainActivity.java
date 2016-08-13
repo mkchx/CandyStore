@@ -608,6 +608,7 @@ public class MainActivity extends AppCompatActivity implements MainInterface, Ma
     }
 
     public void setWindowInfoForm(Venues venues) {
+
         uiWindowTitle.setText(venues.getName());
         uiWindowAddress.setText((venues.getLocation() != null ? venues.getLocation().getAddress() : ""));
         uiWindowCategory.setText((venues.getCategories() != null && venues.getCategories().size() > 0 ? venues.getCategories().get(0).getName() : ""));

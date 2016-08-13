@@ -452,6 +452,7 @@ public class MainPresenter implements MainHelper.Presenter {
 
             } else if (uiWindowInfo.getVisibility() == View.VISIBLE && !show) {
                 AnimationUtil.hideEffect(mHideDto);
+                mSelected = null;
             }
 
         } else {
@@ -541,6 +542,9 @@ public class MainPresenter implements MainHelper.Presenter {
 
     @Override
     public void onVenuesResponse(List<Venues> venues) {
+
+        mVenues = null;
+        mSelected = null;
 
         for (Venues venue : venues) {
 
