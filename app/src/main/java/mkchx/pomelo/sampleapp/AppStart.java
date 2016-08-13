@@ -4,20 +4,23 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
-import mkchx.pomelo.sampleapp.injection.component.ApiComponent;
-import mkchx.pomelo.sampleapp.injection.component.AppComponent;
-import mkchx.pomelo.sampleapp.injection.component.DaggerApiComponent;
-import mkchx.pomelo.sampleapp.injection.component.DaggerAppComponent;
-import mkchx.pomelo.sampleapp.injection.module.ApiModule;
-import mkchx.pomelo.sampleapp.injection.module.AppModule;
-import mkchx.pomelo.sampleapp.injection.module.ConnectionModule;
-import mkchx.pomelo.sampleapp.injection.module.NetModule;
-import mkchx.pomelo.sampleapp.injection.module.PicassoModule;
+import mkchx.pomelo.sampleapp.domain.injection.component.ApiComponent;
+import mkchx.pomelo.sampleapp.domain.injection.component.AppComponent;
+import mkchx.pomelo.sampleapp.domain.injection.component.DaggerApiComponent;
+import mkchx.pomelo.sampleapp.domain.injection.component.DaggerAppComponent;
+import mkchx.pomelo.sampleapp.domain.injection.module.ApiModule;
+import mkchx.pomelo.sampleapp.domain.injection.module.AppModule;
+import mkchx.pomelo.sampleapp.domain.injection.module.NetModule;
+import mkchx.pomelo.sampleapp.domain.injection.module.PicassoModule;
+import mkchx.pomelo.sampleapp.domain.injection.module.PresenterModule;
+import mkchx.pomelo.sampleapp.domain.utils.DeviceConfigUtil;
 
 public class AppStart extends Application {
 
     AppComponent mAppComponent;
     ApiComponent mApiComponent;
+
+    DeviceConfigUtil mDeviceConfig;
 
     static AppStart mInstance;
 
@@ -40,12 +43,13 @@ public class AppStart extends Application {
 
         mInstance = this;
         //refWatcher = LeakCanary.install(this);
+        mDeviceConfig = new DeviceConfigUtil(this);
 
         mAppComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
                 .netModule(new NetModule(getString(R.string.api_url)))
                 .picassoModule(new PicassoModule(this))
-                .connectionModule(new ConnectionModule(this))
+                .presenterModule(new PresenterModule())
                 .build();
 
         mApiComponent = DaggerApiComponent.builder()
@@ -60,6 +64,10 @@ public class AppStart extends Application {
 
     public ApiComponent getApiComponent() {
         return mApiComponent;
+    }
+
+    public DeviceConfigUtil getDeviceConfig() {
+        return mDeviceConfig;
     }
 
     public static AppStart getApp() {

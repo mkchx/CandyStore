@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import mkchx.pomelo.sampleapp.models.dto.FoursquareDto;
-import mkchx.pomelo.sampleapp.views.activity.MainActivity;
+import mkchx.pomelo.sampleapp.domain.models.dto.FoursquareDto;
+import mkchx.pomelo.sampleapp.ui.main.MainActivity;
 import retrofit2.Response;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
